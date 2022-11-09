@@ -42,7 +42,7 @@ dwidenoise raw_dwi.mif dwi_den.mif -noise noise.mif
 
 #calculate difference between raw and denoised image
 mrcalc raw_dwi.mif dwi_den.mif –subtract residual.mif 
-##mrview noise.mif residual.mif #outputs a .mif noise image #ask niyousha about relevance
+##mrview noise.mif residual.mif #outputs a .mif noise image
 
 #Gibbs denoising (using mrdegibbs) to check your diffusion data for ringing
 mrdegibbs dwi_den.mif dwi_den_unr.mif –axes 0,1
@@ -158,7 +158,7 @@ mrview dwi_den_unr_preproc_unbiased.mif -tractography.load tracts_sifted_100k.tc
 ########################################################
 
 # These commands are for quality-checking your diffusion data
-#most already dont by niyousha, sort them later
+#most already done earlier sort them later
 
 ### Quality checks for Step 2 ###
 
